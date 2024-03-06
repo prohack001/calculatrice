@@ -1,0 +1,22 @@
+name: calculatrice
+
+on:
+  push:
+    branches: ["master"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Installation de PHP
+        uses: actions/setup-php@v2
+        with:
+          php-version: 7.4
+      - name: Installation de phpunit
+        run: composer global require phpunit/phpunit
+      - name: Run le projet
+        run: ./vendor/bin/phpunit
