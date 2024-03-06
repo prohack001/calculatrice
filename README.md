@@ -1,4 +1,3 @@
-Voici un exemple de fichier README pour votre projet :
 
 Calculatrice PHP
 ================
