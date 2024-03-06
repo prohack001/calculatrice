@@ -19,4 +19,4 @@ jobs:
       - name: Installation de phpunit
         run: composer global require phpunit/phpunit
       - name: Run le projet
-        run: ./vendor/bin/phpunit
+        run: phpunit test.php
